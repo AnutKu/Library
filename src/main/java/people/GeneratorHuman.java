@@ -4,33 +4,25 @@
  */
 package people;
 
-import com.github.javafaker.Faker;
 import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  *
  * @author Анна
  */
-public class Generator {
-    public static final Faker faker = new Faker(Locale.forLanguageTag("ru-RU"));
+public class GeneratorHuman {
+
     public static ArrayList<Student> all_students = new ArrayList<>();
     public static ArrayList<Tutor> all_tutors = new ArrayList<>();
     public static ArrayList<Student> generateStudent(int quantity){
         for (int i = 0; i < quantity; i++){
-            String name = faker.name().firstName();
-            String surname = faker.name().lastName();
-            String group = "Группа № " + faker.number().numberBetween(1, 1000);
-            Student student = (Student) God.createHuman("student", name, surname, null, group);
+            Student student = (Student) God.createHuman("student");
             all_students.add(student);
         }
         return all_students;}
     public static ArrayList<Tutor> generateTutor(int quantity){
         for (int i = 0; i < quantity; i++){
-            String name = faker.name().firstName();
-            String surname = faker.name().lastName();
-            String patronymic = faker.name().firstName();
-            Tutor tutor = (Tutor) God.createHuman("tutor", name, surname, patronymic, null);
+            Tutor tutor = (Tutor) God.createHuman("tutor");
             all_tutors.add(tutor);
             
         }

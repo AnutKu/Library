@@ -11,14 +11,14 @@ package books;
 public class RussianFictionBook implements RussianBook{
     public String authortitle;
     public Integer year;
-    
-     public RussianFictionBook(String authortitle, Integer year) {
+
+    public RussianFictionBook(String authortitle, Integer year) {
         this.authortitle = authortitle;
         this.year = year;
     }
-    
+
     @Override
     public String get_full_title() {
         return authortitle +  " (" + year + ")";
-    
-}}
+
+    }}

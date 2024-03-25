@@ -5,12 +5,9 @@
 package Library;
 
 import books.BookGenerator;
-import books.EnglishBook;
-import books.RussianBook;
+
 import java.util.ArrayList;
-import people.Generator;
-import people.Human;
-import people.Student;
+import people.GeneratorHuman;
 
 /**
  *
@@ -41,21 +38,21 @@ public class Library {
     }    
     
     public static void generateStudent(Integer kol_stud) {
-        Generator.generateStudent(kol_stud);      
+        GeneratorHuman.generateStudent(kol_stud);
     }
     
     public static void generateTutor(Integer kol_tutor) {
-        Generator.generateTutor(kol_tutor);        
+        GeneratorHuman.generateTutor(kol_tutor);
     }
     public static ArrayList<String> allStudent;
     public static ArrayList<String> getAllStudents() {
-        allStudent = Generator.getAllStudents();
+        allStudent = GeneratorHuman.getAllStudents();
         return allStudent;
     }
     
     public static ArrayList<String> allTutor;
     public static ArrayList<String> getAllTutors() {
-        allTutor = Generator.getAllTutors();
+        allTutor = GeneratorHuman.getAllTutors();
         return allTutor;
     }
 }
